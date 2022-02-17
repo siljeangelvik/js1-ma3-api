@@ -33,7 +33,6 @@ body {
 
 header, footer {
     background-color: var(--darkBlack);
-    overflow-x: hidden;
     width: 100vw;
     left: 0;
     display: flex;
@@ -50,24 +49,10 @@ footer { position:absolute; bottom: 0; height: 5%;}
 
 header div:first-child,
 footer div:first-child {
-    margin-left: 20px;
+    margin-left: 15px;
     color: var(--darkBlack);
     width: 40px;
     height: 40px;
-    border-radius: 50px;
-}
-
-header div:first-child a,
-footer div:first-child a {
-    color: var(--black);
-    display: flex;
-    font-size: 28px;
-    height: 100%;
-    width: 100%;
-    padding-top: 4px;
-    padding-left: 1px;
-    justify-content: center;
-    align-items: center;
 }
 
 header div:last-child,
