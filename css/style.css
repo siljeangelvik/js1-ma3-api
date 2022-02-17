@@ -23,7 +23,7 @@ body {
     background: var(--black);
     max-width:330px;
     margin: 0 auto;
-    padding-top: 90px;
+    padding-top: 70px;
     font-family: 'Ropa Sans', sans-serif;
     /*background: url("../assets/valorantwallp.png");/**/
     background-repeat: no-repeat;
@@ -43,8 +43,8 @@ header, footer {
     color: var(--white);
 }
 /* @formatter:off */
-header { position: absolute; top: 0;  height: 10% }
-footer { position:absolute; bottom: 0; height: 5%;}
+header { position: absolute; top: 0;  height: 6vh }
+footer { position:absolute; bottom: 0; height: 4vh;}
 /* @formatter:on */
 
 header div:first-child,
@@ -99,13 +99,14 @@ a { text-decoration: none; list-style-type: none; font-weight: lighter; letter-s
     justify-content: space-between;
     flex-direction: column;
     row-gap: 20px;
+    padding: 20px 0 0 0;
 }
 
 #agentsList {
     justify-content: space-around;
     flex-wrap: wrap;
     row-gap: 40px;
-    padding: 20px 0;
+    padding: 20px 0 60px 0;
 }
 
 #agentsList div { width: 35%; }
