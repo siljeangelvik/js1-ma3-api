@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valorant Agents</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ropa+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/valorant" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <div>
+        <img src="" alt="">
+    </div>
+
+    <div>
+        <a href="index.html"></a>
+        <a href="html/contact.html"></a>
+    </div>
+</header>
+
+
+<h1 class="index">Valorant Agents</h1>
+<div id="agentsList"></div>
+<p class="loader"></p>
+
+<script>
+
+    const url = "https://valorant-api.com/v1/agents";
+    const out = document.querySelector('#agentsList');
+
+    fetch(url)
+        .then(response => response.json())
+        .then(parsedData => {
+            const removeAgent = parsedData.data;
+            removeAgent.splice(6, 1);
+            listData(parsedData.data);
+        })
+        .catch((error) => out.innerHTML = "Something's wrong!" + error)
+        .finally(() => document.querySelector(".loader").remove());
+
+    function listData(agents) {
+        console.log(agents);
+        agents.forEach((agent) => {
+
+            out.innerHTML +=
+                `<div>
+                  <a href="details.html?uuid=${agent.uuid}">
+                        <p>${agent.displayName}</p>
+                        <p style="font-size: 12px; font-weight: lighter;">${agent.role.displayName}</p>
+                        <img src="${agent.displayIcon}" alt="${agent.displayName}" width="110px"></a>
+                </div>`;
+            console.log()
+        })
+    }
+
+
+    //const originalURL = "https://weatherbit-v1-mashape.p.rapidapi.com/forecast/minutely?lat=35.5&lon=-78.5";
+    //const corsEnabledUrl = "https://noroffcors.herokuapp.com/" + originalUrl;
+
+</script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link href="https://fonts.googleapis.com/css2?family=Ropa+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/valorant" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="agentDetailsBox"></div>
+<p class="loader"></p>
+<p class="back"></p>
+
+<script>
+    const agentDetails = document.querySelector('#agentDetailsBox');
+    const queryString = document.location.search;
+    const params = new URLSearchParams(queryString);
+    const agentUuid = params.get("uuid");
+    let url = `https://valorant-api.com/v1/agents/${agentUuid}`;
+
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            listData(data.data);
+            //console.log(data.data + `, Data Value: ` + data.data.value + `, Data Type: ` + typeof data.data);
+        })
+        .catch(error => {
+            agentDetails.innerHTML = "I'm sorry, we couldn't get what you're looking for.";
+            console.log("Error message: " + error);
+        })
+        .finally(() => {
+            document.querySelector(".loader").remove();
+            document.querySelector(".back").innerHTML = `<a href="index.html">Back</a>`;
+        })
+
+    function listData(agentUuid) {
+        //console.log(agentUuid);
+        document.title = `Agent: ` + agentUuid.displayName;
+        agentDetails.innerHTML = `
+        <h1>${agentUuid.displayName}</h1>
+
+        <h2>Role: ${agentUuid.role.displayName}</h2>
+        <p>${agentUuid.role.description}</p>
+
+        <img src="${agentUuid.bustPortrait}" alt="${agentUuid.displayName}" width="100%">
+
+        <p>${agentUuid.description}</p>
+        <h2>Abilities</h2>
+            <!---->
+            <div class="detailsAbilities" style="display: flex; flex-direction: column;">
+            <div style="display: flex; justify-content: space-between; width: 60%;">
+              <h3 style="display: inline-flex">${agentUuid.abilities[0].displayName}</h3>
+              <img src="${agentUuid.abilities[0].displayIcon}" alt="${agentUuid.displayName} + ${agentUuid.abilities[0].displayName}" width="35px">
+            </div>
+
+             <h4 style="padding-bottom: 15px;">Description:</h4>
+             <em>${agentUuid.abilities[0].description}</em>
+            </div>
+            <!---->
+            <div class="detailsAbilities" style="display: flex; flex-direction: column;">
+            <div style="display: flex; justify-content: space-between; width: 60%;">
+              <h3 style="display: inline-flex">${agentUuid.abilities[1].displayName}</h3>
+                <img src="${agentUuid.abilities[1].displayIcon}" alt="${agentUuid.displayName} + ${agentUuid.abilities[1].displayName}" width="35px">
+            </div>
+
+             <h4 style="padding-bottom: 15px;">Description:</h4>
+             <em>${agentUuid.abilities[1].description}</em>
+            </div>
+             <!---->
+            <div class="detailsAbilities" style="display: flex; flex-direction: column;">
+            <div style="display: flex; justify-content: space-between; width: 60%;">
+              <h3 style="display: inline-flex">${agentUuid.abilities[2].displayName}</h3>
+              <img src="${agentUuid.abilities[2].displayIcon}" alt="${agentUuid.displayName} + ${agentUuid.abilities[2].displayName}" width="35px">
+            </div>
+
+             <h4 style="padding-bottom: 15px;">Description:</h4>
+             <em>${agentUuid.abilities[2].description}</em>
+            </div>
+             <!---->
+            <div class="detailsAbilities" style="display: flex; flex-direction: column;">
+            <div style="display: flex; justify-content: space-between; width: 60%;">
+              <h3 style="display: inline-flex">${agentUuid.abilities[3].displayName}</h3>
+              <img src="${agentUuid.abilities[3].displayIcon}" alt="${agentUuid.displayName} + ${agentUuid.abilities[3].displayName}" width="35px">
+            </div>
+
+             <h4 style="padding-bottom: 15px;">Description:</h4>
+             <em>${agentUuid.abilities[3].description}</em>
+            </div>
+
+        <h2>Voicelines</h2>
+        <div style="display: flex; flex-direction: row; justify-content: space-between;">
+            <h4 style="width: 55%;">Audio Voiceline 1:</h4>
+            <h4 style="width: 45%;">Audio Voiceline 2:</h4>
+        </div>
+
+        <div style="display: flex; flex-direction: row; gap: 20px;">
+            <audio controls style="max-width: 50%;">
+             <source src="${agentUuid.voiceLine.mediaList[0].wwise}">
+            </audio>
+            <audio controls style="max-width: 50%;">
+                <source src="${agentUuid.voiceLine.mediaList[0].wave}">
+            </audio>
+        </div>
+`;
+        agentDetails.style.backgroundImage = `url(${agentUuid.background})`;
+        agentDetails.style.backgroundRepeat = "no-repeat";
+        agentDetails.style.backgroundSize = "110% 50%"; //SIZE: width height
+        agentDetails.style.backgroundPosition = "-100% 10%"; // POSITION: width height
+    }
+
+</script>
+</body>
+</html>
