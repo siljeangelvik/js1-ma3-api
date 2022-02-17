@@ -52,7 +52,7 @@
         <h2>Abilities</h2>
             <!---->
             <div class="detailsAbilities" style="display: flex; flex-direction: column;">
-            <div style="display: flex; justify-content: space-between; width: 60%;">
+            <div style="display: flex; justify-content: space-between;">
               <h3 style="display: inline-flex">${agentUuid.abilities[0].displayName}</h3>
               <img src="${agentUuid.abilities[0].displayIcon}" alt="${agentUuid.displayName} + ${agentUuid.abilities[0].displayName}" width="35px">
             </div>
@@ -62,7 +62,7 @@
             </div>
             <!---->
             <div class="detailsAbilities" style="display: flex; flex-direction: column;">
-            <div style="display: flex; justify-content: space-between; width: 60%;">
+            <div style="display: flex; justify-content: space-between;">
               <h3 style="display: inline-flex">${agentUuid.abilities[1].displayName}</h3>
                 <img src="${agentUuid.abilities[1].displayIcon}" alt="${agentUuid.displayName} + ${agentUuid.abilities[1].displayName}" width="35px">
             </div>
@@ -72,7 +72,7 @@
             </div>
              <!---->
             <div class="detailsAbilities" style="display: flex; flex-direction: column;">
-            <div style="display: flex; justify-content: space-between; width: 60%;">
+            <div style="display: flex; justify-content: space-between;">
               <h3 style="display: inline-flex">${agentUuid.abilities[2].displayName}</h3>
               <img src="${agentUuid.abilities[2].displayIcon}" alt="${agentUuid.displayName} + ${agentUuid.abilities[2].displayName}" width="35px">
             </div>
@@ -82,7 +82,7 @@
             </div>
              <!---->
             <div class="detailsAbilities" style="display: flex; flex-direction: column;">
-            <div style="display: flex; justify-content: space-between; width: 60%;">
+            <div style="display: flex; justify-content: space-between;">
               <h3 style="display: inline-flex">${agentUuid.abilities[3].displayName}</h3>
               <img src="${agentUuid.abilities[3].displayIcon}" alt="${agentUuid.displayName} + ${agentUuid.abilities[3].displayName}" width="35px">
             </div>
@@ -93,25 +93,25 @@
 
         <h2>Voicelines</h2>
         <div style="display: flex; flex-direction: row; justify-content: space-between;">
-           <h4 style="width: 45%;">Audio Voiceline 1:</h4>
+           <h4>Audio Voiceline 1:</h4>
             <!-- <h4 style="width: 55%;">Audio Voiceline 2:</h4> -->
         </div>
 
         <div style="display: flex; flex-direction: row; gap: 20px;">
              <!--
-            <audio controls style="max-width: 50%;">
+            <audio controls>
              <source src="${agentUuid.voiceLine.mediaList[0].wwise}">
             </audio>
            -->
-            <audio controls style="max-width: 50%;">
+            <audio controls>
                 <source src="${agentUuid.voiceLine.mediaList[0].wave}">
             </audio>
         </div>
 `;
         agentDetails.style.backgroundImage = `url(${agentUuid.background})`;
         agentDetails.style.backgroundRepeat = "no-repeat";
-        agentDetails.style.backgroundSize = "110% 40%"; //SIZE: width height
-        agentDetails.style.backgroundPosition = "-100% 10%"; // POSITION: width height
+        agentDetails.style.backgroundSize = "120% 30%"; //SIZE: width height
+        agentDetails.style.backgroundPosition = "-100% 11%"; // POSITION: width height
     }
 
 </script>

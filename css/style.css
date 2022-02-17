@@ -16,7 +16,7 @@
 
 body {
     background: var(--black);
-    max-width: 430px;
+    max-width: 300px;
     overflow-x: hidden;
     margin: 0 auto;
     padding: 50px 10px 0 10px;
