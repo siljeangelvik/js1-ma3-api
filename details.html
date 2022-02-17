@@ -57,7 +57,7 @@
               <img src="${agentUuid.abilities[0].displayIcon}" alt="${agentUuid.displayName} + ${agentUuid.abilities[0].displayName}" width="35px">
             </div>
 
-             <h4 style="padding-bottom: 15px;">Description:</h4>
+             <h4 style="padding-bottom: 15px;">${agentUuid.abilities[0].slot}: </h4>
              <em>${agentUuid.abilities[0].description}</em>
             </div>
             <!---->
@@ -67,7 +67,7 @@
                 <img src="${agentUuid.abilities[1].displayIcon}" alt="${agentUuid.displayName} + ${agentUuid.abilities[1].displayName}" width="35px">
             </div>
 
-             <h4 style="padding-bottom: 15px;">Description:</h4>
+             <h4 style="padding-bottom: 15px;">${agentUuid.abilities[1].slot}: </h4>
              <em>${agentUuid.abilities[1].description}</em>
             </div>
              <!---->
@@ -77,7 +77,7 @@
               <img src="${agentUuid.abilities[2].displayIcon}" alt="${agentUuid.displayName} + ${agentUuid.abilities[2].displayName}" width="35px">
             </div>
 
-             <h4 style="padding-bottom: 15px;">Description:</h4>
+             <h4 style="padding-bottom: 15px;">${agentUuid.abilities[2].slot}: </h4>
              <em>${agentUuid.abilities[2].description}</em>
             </div>
              <!---->
@@ -87,20 +87,22 @@
               <img src="${agentUuid.abilities[3].displayIcon}" alt="${agentUuid.displayName} + ${agentUuid.abilities[3].displayName}" width="35px">
             </div>
 
-             <h4 style="padding-bottom: 15px;">Description:</h4>
+             <h4 style="padding-bottom: 15px;">${agentUuid.abilities[3].slot}: </h4>
              <em>${agentUuid.abilities[3].description}</em>
             </div>
 
         <h2>Voicelines</h2>
         <div style="display: flex; flex-direction: row; justify-content: space-between;">
-            <h4 style="width: 55%;">Audio Voiceline 1:</h4>
-            <h4 style="width: 45%;">Audio Voiceline 2:</h4>
+           <h4 style="width: 45%;">Audio Voiceline 1:</h4>
+            <!-- <h4 style="width: 55%;">Audio Voiceline 2:</h4> -->
         </div>
 
         <div style="display: flex; flex-direction: row; gap: 20px;">
+             <!--
             <audio controls style="max-width: 50%;">
              <source src="${agentUuid.voiceLine.mediaList[0].wwise}">
             </audio>
+           -->
             <audio controls style="max-width: 50%;">
                 <source src="${agentUuid.voiceLine.mediaList[0].wave}">
             </audio>
@@ -108,7 +110,7 @@
 `;
         agentDetails.style.backgroundImage = `url(${agentUuid.background})`;
         agentDetails.style.backgroundRepeat = "no-repeat";
-        agentDetails.style.backgroundSize = "110% 50%"; //SIZE: width height
+        agentDetails.style.backgroundSize = "110% 40%"; //SIZE: width height
         agentDetails.style.backgroundPosition = "-100% 10%"; // POSITION: width height
     }
 
