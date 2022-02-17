@@ -127,3 +127,9 @@ troubleshooting source code
 
 
 
+##Resources:  
+* [Valorant API](https://valorant-api.com/)
+* [Logo](https://seeklogo.com/vector-logo/379976/valorant)
+* Loader
+
+

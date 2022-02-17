@@ -12,7 +12,7 @@
 <body>
 
 <header>
-    <div></div>
+    <div><a href="index.html"><img src="assets/valorant-seeklogo.com.svg" alt="Valorant Logo"></a></div>
     <div>
         <a href="index.html">Home</a>
         <a href="html/contact.html">Contact</a>
@@ -22,6 +22,14 @@
 <div id="agentDetailsBox"></div>
 <p class="loader"></p>
 <p class="back"></p>
+
+<footer>
+    <div><a href="index.html"><img src="assets/valorant-seeklogo.com.svg" alt="Valorant Logo"></a></div>
+    <div>
+        <p>© made by <a class="sav">savg</a></p>
+    </div>
+</footer>
+
 
 <script>
     const agentDetails = document.querySelector('#agentDetailsBox');
@@ -49,6 +57,8 @@
         //console.log(agentUuid);
         document.title = `Agent: ` + agentUuid.displayName;
         agentDetails.innerHTML = `
+
+
         <h1>${agentUuid.displayName}</h1>
 
         <h2>Role: ${agentUuid.role.displayName}</h2>
@@ -101,7 +111,7 @@
 
         <h2>Voicelines</h2>
         <div style="display: flex; flex-direction: row; justify-content: space-between;">
-           <p>${agentUuid.displayName} voiceline on match entry:</p>
+           <p>${agentUuid.displayName} voiceline on match entry</p>
             <!-- <h4 style="width: 55%;">Audio Voiceline 2:</h4> -->
         </div>
 
@@ -115,11 +125,13 @@
                 <source src="${agentUuid.voiceLine.mediaList[0].wave}">
             </audio>
         </div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
 `;
         agentDetails.style.backgroundImage = `url(${agentUuid.background})`;
         agentDetails.style.backgroundRepeat = "no-repeat";
-        agentDetails.style.backgroundSize = "120% 30%"; //SIZE: width height
-        agentDetails.style.backgroundPosition = "-100% 11%"; // POSITION: width height
+        agentDetails.style.backgroundSize = "120% 50%"; //SIZE: width height
+        agentDetails.style.backgroundPosition = "-80% 60%"; // POSITION: width height
     }
 
 </script>

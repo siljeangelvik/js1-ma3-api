@@ -12,7 +12,7 @@
 <body>
 
 <header>
-    <div></div>
+    <div><a href="index.html"><img src="assets/valorant-seeklogo.com.svg" alt="Valorant Logo"></a></div>
     <div>
         <a href="index.html">Home</a>
         <a href="html/contact.html">Contact</a>
@@ -23,6 +23,14 @@
 <div id="agentsList"></div>
 <p class="loader"></p>
 
+<footer>
+    <div><a href="index.html"><img src="assets/valorant-seeklogo.com.svg" alt="Valorant Logo"></a></div>
+    <div>
+        <p>© made by <a class="sav">savg</a></p>
+    </div>
+</footer>
+
+
 <script>
 
     const url = "https://valorant-api.com/v1/agents";
@@ -32,7 +40,7 @@
         .then(response => response.json())
         .then(parsedData => {
             const removeAgent = parsedData.data;
-            removeAgent.splice(6, 1);
+            removeAgent.splice(6, 1); // removing duplicate agent "Sova"
             listData(parsedData.data);
         })
         .catch((error) => out.innerHTML = "Something's wrong!" + error)
@@ -40,15 +48,18 @@
 
     function listData(agents) {
         console.log(agents);
+        // agents.length = 10;
         agents.forEach((agent) => {
 
             out.innerHTML +=
                 `<div>
                   <a href="details.html?uuid=${agent.uuid}">
                         <p>${agent.displayName}</p>
-                        <p style="font-size: 12px; font-weight: lighter;">${agent.role.displayName}</p>
-                        <img src="${agent.displayIcon}" alt="${agent.displayName}" width="110px" style="margin-top: -10px;"></a>
-                </div>`;
+                        <p style="font-size: 12px; font-weight: lighter; text-shadow: 2px 2px var(--black)">${agent.role.displayName}</p>
+                        <img src="${agent.displayIcon}" alt="${agent.displayName}" width="100"></a>
+                </div>
+
+`;
             console.log()
         })
     }
