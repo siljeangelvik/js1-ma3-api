@@ -1,13 +1,7 @@
 # js1-ma3-api
 
 ####//TO DO:
-**change project name to:** _silje-angelvik-js1-ca_  
-
-##Level 2 Process
-###contact.html
-If all validation passes,   
-add a message above the form   
-indicating the form passed validation  
+**change project name to:** _silje-angelvik-js1-ca_
 
 ##Information
 ###Rules
