@@ -1,61 +1,86 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <link href="https://fonts.googleapis.com/css2?family=Ropa+Sans&display=swap" rel="stylesheet">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form Testing</title>
+    <link rel="stylesheet" href="/css/contact.css">
     <link href="https://fonts.cdnfonts.com/css/valorant" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/form.css">
-    <script type="text/javascript" src="../js/form.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Ropa+Sans&display=swap" rel="stylesheet">
+    <script defer src="/js/contact.js"></script>
 </head>
 <body>
 <header>
-    <div><a href="../index.html"><img src="../assets/valorant-seeklogo.com.svg" alt="Valorant Logo"></a></div>
     <div>
-        <a href="../index.html">Home</a>
-        <a href="../html/contact.html">Contact</a>
+        <a href="../index.html">
+            <img src="../assets/valorant-seeklogo.com.svg" width="50" alt="Valorant Logo">
+        </a>
+    </div>
+    <div>
+        <a class="font-valorant" href="../index.html">Home</a>
+        <a class="font-valorant" href="../html/contact.html">Contact</a>
     </div>
 </header>
-<!-- For demo-purposes, all input fields are of the type text in this example -->
-<form id="signup">
-    <p id="message"></p>
+
+<h1>Contact us</h1>
+
+<div id="successMessage" style="display:none;">
     <div>
-        <label for="usrName">Name: </label>
-        <input type="text" id="usrName" name="usrName">
-        <span id="usrNameMsg" class="message"></span>
+        <h3 class="font-valorant">Thanks for being awesome! </h3>
+        <p>We have received your message and would like to thank you for writing to us.
+            If your inquiry is urgent, please use the telephone number listed below.
+            Otherwise, we will reply by email as soon as possible.</p>
+        <p><strong class="font-valorant">Talk to you soon!</strong></p>
+        <p><a href="../index.html" class="font-valorant">Got it!</a></p>
     </div>
-    <div>
-        <label for="usrEmail">Email: </label>
-        <input type="text" id="usrEmail" name="usrEmail">
-        <span id="usrEmailMsg" class="message"></span>
-    </div>
-    <div>
-        <label for="usrBirth">Date of birth: </label>
-        <input type="text" id="usrBirth" name="usrBirth">
-        <span id="usrBirthMsg" class="message">yyyy-mm-dd</span>
-    </div>
-    <div>
-        <label for="usrPhone">Phone number: </label>
-        <input type="text" id="usrPhone" name="usrPhone">
-        <span id="usrPhoneMsg" class="message"></span>
-    </div>
-    <div>
-        <label for="usrPwd">Password: </label>
-        <input type="text" id="usrPwd" name="usrPwd">
-        <span id="usrPwdMsg" class="message"></span>
-    </div>
-    <div>
-        <input type="submit" value="Submit">
-    </div>
-</form>
+</div>
+
+<div class="container">
+    <form id="form" onsubmit="validateInputs()">
+        <h2 class="font-valorant">Share a message with us</h2>
+
+        <div class="input-field">
+            <label for="name">Name:</label>
+            <input id="name" name="name" onchange="validateInputs()" type="text">
+            <div class="error"></div>
+        </div>
+
+        <div class="input-field">
+            <label for="address">IP Address:</label>
+            <input id="address" name="address" onchange="validateInputs()">
+            <div class="error"></div>
+        </div>
+
+        <div class="input-field">
+            <label for="email">Email:</label>
+            <input id="email" name="email" type="text">
+            <div class="error"></div>
+        </div>
+
+        <div class="input-field">
+            <label for="email2">Confirm Email:</label>
+            <input id="email2" name="email2" onchange="validateInputs()" type="text">
+            <div class="error"></div>
+            <br>
+        </div>
+
+        <div class="input-field">
+            <label for="comment">Message:</label>
+            <textarea id="comment" name="comment" onchange="validateInputs()" rows="4" cols="50"></textarea>
+            <div class="error"></div>
+        </div>
+
+        <button type="submit" id="button" class="font-valorant">Send your message</button>
+    </form>
+</div>
 
 <footer>
-    <div><a href="index.html"><img src="assets/valorant-seeklogo.com.svg" alt="Valorant Logo"></a></div>
+    <div><a href="../index.html"><img src="../assets/valorant-seeklogo.com.svg" width="50" alt="Valorant Logo"></a>
+    </div>
     <div>
-        <p>© made by <a class="sav">savg</a></p>
+        <p>© made by <a class="font-valorant">savg</a></p>
     </div>
 </footer>
 </body>

@@ -20,7 +20,7 @@
 </header>
 
 <div id="agentsList">
-    <h1 class="index">Valorant Agents</h1>
+    <h1>Valorant Agents</h1>
 </div>
 <p class="loader"></p>
 
@@ -41,7 +41,7 @@
         .then(response => response.json())
         .then(parsedData => {
             const removeAgent = parsedData.data;
-            removeAgent.splice(6, 1); // removing duplicate agent "Sova"
+            removeAgent.splice(6, 1); // removing duplicate agent: "Sova"
             listData(parsedData.data);
         })
         .catch((error) => out.innerHTML = "Something's wrong!" + error)
@@ -59,7 +59,6 @@
                         <p style="font-size: 12px; font-weight: lighter; text-shadow: 2px 2px var(--black)">${agent.role.displayName}</p>
                         <img src="${agent.displayIcon}" alt="${agent.displayName}" width="100"></a>
                 </div>
-
 `;
             console.log()
         })

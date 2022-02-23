@@ -1,3 +1,4 @@
+/* @formatter:off */
 :root {
     --black: #222;
     --darkBlack: #121212;
@@ -5,52 +6,33 @@
     --red: crimson;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    color: var(--white);
-    background: transparent;
-    text-rendering: optimizeLegibility;
-    -moz-osx-font-smoothing: grayscale;
-    text-transform: uppercase;
-    /*border:1px solid white;/**/
-}
-
+* { text-rendering: optimizeLegibility; -moz-osx-font-smoothing: grayscale; }
+html { position: relative; background-color: var(--black); }
 html, body { height: 100%; overflow: hidden; }
-/* MOBILE SIZE */
+
 body {
-    background: var(--black);
-    max-width:330px;
-    margin: 0 auto;
-    padding-top: 70px;
+    width: 330px;
+    margin: 6vh auto 0 auto;
+    color: var(--white);
     font-family: 'Ropa Sans', sans-serif;
-    /*background: url("../assets/valorantwallp.png");/**/
-    background-repeat: no-repeat;
-    background-position: right;
-    background-size: cover;
 }
 
 header, footer {
     background-color: var(--darkBlack);
     display: flex;
-    flex:1 auto;
+    flex: 1 auto;
     justify-content: space-between;
     align-items: center;
     width: 100vw;
-    height: 80px;
     left: 0;
-    color: var(--white);
 }
-/* @formatter:off */
-header { position: absolute; top: 0;  height: 6vh }
-footer { position:absolute; bottom: 0; height: 4vh;}
-/* @formatter:on */
+
+header { position: absolute; top: 0;  height: 6% }
+footer { position: absolute; bottom: 0; height: 5%;}
 
 header div:first-child,
 footer div:first-child {
     margin-left: 15px;
-    color: var(--darkBlack);
     width: 40px;
     height: 40px;
 }
@@ -61,23 +43,18 @@ footer div:last-child {
     justify-content: flex-end;
     padding-right: 20px;
     display: flex;
-    column-gap:40px;
+    column-gap: 40px;
 }
 
-/* @formatter:off */
 footer div:last-child { justify-content: flex-start; font-size: 13px; }
-html { position: relative; }
-h1,h2,h3 { font-weight: bolder; font-family: 'VALORANT', sans-serif; }
+h1,h2,h3 { font-weight: bolder; font-family: 'VALORANT', sans-serif; background-color: transparent; }
 h4 { font-weight: bolder; letter-spacing: 0.07em; }
 em { font-size: 16px; }
 p {  line-height: 1.4em; letter-spacing:0.05em; }
-a { text-decoration: none; list-style-type: none; font-weight: lighter; letter-spacing: 1px; font-family: 'VALORANT', sans-serif; }
+a { color:var(--white); text-decoration: none; list-style-type: none; font-weight: lighter; letter-spacing: 1px; font-family: 'VALORANT', sans-serif; }
 
-.detailsAbilities { padding:0 0 5px 5px; border-left: 3px solid var(--white); }
-.back * { color: var(--black); }
-/* Hide scrollbar for Chrome, Safari and Opera */
 #agentDetailsBox::-webkit-scrollbar { display: none; }
-/* Hide scrollbar for IE, Edge and Firefox */
+
 #agentsList, #agentDetailsBox {
     display: flex;
 
@@ -88,28 +65,16 @@ a { text-decoration: none; list-style-type: none; font-weight: lighter; letter-s
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
 
-    max-width:100%;
-    height: 100%;
+    max-width:330px;
+    height: 89%;
 
     overflow-x: hidden; /* left, right *//* left, right */
     overflow-y: scroll !important; /* top, bottom */
 }
 
-#agentDetailsBox {
-    justify-content: space-between;
-    flex-direction: column;
-    row-gap: 20px;
-    padding: 20px 0 0 0;
-}
-
-#agentsList {
-    justify-content: space-around;
-    flex-wrap: wrap;
-    row-gap: 40px;
-    padding: 20px 0 60px 0;
-}
-
-#agentsList div { width: 35%; }
+#agentsList { justify-content: space-around; flex-wrap: wrap; }
+#agentsList div { text-align: center; width: 48%; }
+#agentDetailsBox { flex-direction: column; }
 
 .back {
     letter-spacing: 1px;
@@ -127,5 +92,75 @@ a { text-decoration: none; list-style-type: none; font-weight: lighter; letter-s
     z-index: 999;
 }
 
-/* TABLET */
-/* DESKTOP */
+.back * { color: var(--black); }
+
+
+
+/* @formatter:off */
+:root {
+    --lightBlack: #222;
+    --darkBlack: #121212;
+    --whiteSmoke: whitesmoke;
+    --redCrimson: crimson;
+    --inputError: #ff3860;
+    --inputSuccess: #09c377;
+}
+
+.font-valorant { font-family: 'VALORANT', sans-serif; }
+
+form#form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    width: 292px;
+    margin: 10vh auto 0 auto;
+    padding: 20px;
+    background-color: var(--darkBlack);
+    border-radius: 4px;
+    font-size: 12px;
+    color: var(--whiteSmoke);
+}
+
+#form h1 { text-align: center; }
+
+#form button {
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+    color: var(--lightBlack);
+    background-color: var(--redCrimson);
+    border: none;
+    border-radius: 4px;
+}
+
+.input-field { display: flex; flex-direction: column; }
+
+.input-field input, textarea {
+    border: 2px solid var(--whiteSmoke);
+    border-radius: 4px;
+    display: inline-block;
+    font-size: 12px;
+    padding: 8px;
+}
+
+.input-field textarea {
+    max-width: 92%;
+    max-height: 100px;
+}
+
+.input-field input:focus,
+.input-field textarea:focus { outline: 0; }
+
+.input-field.success input, .input-field.success textarea { border-color: var(--inputSuccess); }
+.input-field.error input, .input-field.error textarea { border-color: var(--inputError); }
+
+.input-field .error {
+    color: var(--inputError);
+    font-size: 9px;
+    height: 13px;
+}
+
+
+
+
+
