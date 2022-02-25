@@ -28,8 +28,8 @@ header, footer {
     left: 0;
 }
 
-header { position: absolute; top: 0;  height: 6% }
-footer { position: absolute; bottom: 0; height: 5%; text-transform: uppercase; }
+header { position: absolute; top: 0;  height: 8% }
+footer { position: absolute; bottom: 0; height: 6%; text-transform: uppercase; }
 
 header div:first-child,
 footer div:first-child { margin-left: 15px; }
@@ -65,7 +65,7 @@ a { color:var(--white); text-decoration: none; list-style-type: none; font-weigh
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
     max-width:330px;
-    height: 89%;
+    height: 86%;
     overflow-x: hidden; /* left, right *//* left, right */
     overflow-y: scroll !important; /* top, bottom */
 }
