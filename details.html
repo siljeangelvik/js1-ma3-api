@@ -5,17 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
+    <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Ropa+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/valorant" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <header>
-    <div><a href="index.html"><img src="assets/valorant-seeklogo.com.svg" alt="Valorant Logo"></a></div>
     <div>
-        <a href="index.html">Home</a>
-        <a href="html/contact.html">Contact</a>
+        <a href="index.html">
+            <img src="assets/valorant-seeklogo.com.svg" width="50" alt="Valorant Logo">
+        </a>
+    </div>
+    <div>
+        <a class="font-valorant" href="index.html">Home</a>
+        <a class="font-valorant" href="html/contact.html">Contact</a>
     </div>
 </header>
 
@@ -24,12 +28,12 @@
 <p class="back"></p>
 
 <footer>
-    <div><a href="index.html"><img src="assets/valorant-seeklogo.com.svg" alt="Valorant Logo"></a></div>
+    <div><a href="index.html"><img src="assets/valorant-seeklogo.com.svg" width="50" alt="Valorant Logo"></a>
+    </div>
     <div>
-        <p>© made by <a class="sav">savg</a></p>
+        <p>© made by <a class="font-valorant">savg</a></p>
     </div>
 </footer>
-
 
 <script>
     const agentDetails = document.querySelector('#agentDetailsBox');
@@ -72,7 +76,7 @@
             <div class="detailsAbilities" style="display: flex; flex-direction: column;">
             <div style="display: flex; justify-content: space-between;">
               <h3 style="display: inline-flex">${agentUuid.abilities[0].displayName}</h3>
-              <img src="${agentUuid.abilities[0].displayIcon}" alt="${agentUuid.displayName} + ${agentUuid.abilities[0].displayName}" width="35px">
+              <img src="${agentUuid.abilities[0].displayIcon}" alt="${agentUuid.displayName} + ${agentUuid.abilities[0].displayName}" width="40" height="40">
             </div>
 
              <h4 style="padding-bottom: 15px;">${agentUuid.abilities[0].slot}: </h4>
@@ -82,7 +86,7 @@
             <div class="detailsAbilities" style="display: flex; flex-direction: column;">
             <div style="display: flex; justify-content: space-between;">
               <h3 style="display: inline-flex">${agentUuid.abilities[1].displayName}</h3>
-                <img src="${agentUuid.abilities[1].displayIcon}" alt="${agentUuid.displayName} + ${agentUuid.abilities[1].displayName}" width="35px">
+              <img src="${agentUuid.abilities[1].displayIcon}" alt="${agentUuid.displayName} + ${agentUuid.abilities[1].displayName}" width="40" height="40">
             </div>
 
              <h4 style="padding-bottom: 15px;">${agentUuid.abilities[1].slot}: </h4>
@@ -92,7 +96,7 @@
             <div class="detailsAbilities" style="display: flex; flex-direction: column;">
             <div style="display: flex; justify-content: space-between;">
               <h3 style="display: inline-flex">${agentUuid.abilities[2].displayName}</h3>
-              <img src="${agentUuid.abilities[2].displayIcon}" alt="${agentUuid.displayName} + ${agentUuid.abilities[2].displayName}" width="35px">
+              <img src="${agentUuid.abilities[2].displayIcon}" alt="${agentUuid.displayName} + ${agentUuid.abilities[2].displayName}" width="40" height="40">
             </div>
 
              <h4 style="padding-bottom: 15px;">${agentUuid.abilities[2].slot}: </h4>
@@ -102,7 +106,7 @@
             <div class="detailsAbilities" style="display: flex; flex-direction: column;">
             <div style="display: flex; justify-content: space-between;">
               <h3 style="display: inline-flex">${agentUuid.abilities[3].displayName}</h3>
-              <img src="${agentUuid.abilities[3].displayIcon}" alt="${agentUuid.displayName} + ${agentUuid.abilities[3].displayName}" width="35px">
+              <img src="${agentUuid.abilities[3].displayIcon}" alt="${agentUuid.displayName} + ${agentUuid.abilities[3].displayName}" width="40" height="40">
             </div>
 
              <h4 style="padding-bottom: 15px;">${agentUuid.abilities[3].slot}: </h4>
@@ -112,28 +116,18 @@
         <h2>Voicelines</h2>
         <div style="display: flex; flex-direction: row; justify-content: space-between;">
            <p>${agentUuid.displayName} voiceline on match entry</p>
-            <!-- <h4 style="width: 55%;">Audio Voiceline 2:</h4> -->
         </div>
 
         <div style="display: flex; flex-direction: row; gap: 20px;">
-             <!--
-            <audio controls>
-             <source src="${agentUuid.voiceLine.mediaList[0].wwise}">
-            </audio>
-           -->
             <audio controls>
                 <source src="${agentUuid.voiceLine.mediaList[0].wave}">
             </audio>
-        </div>
-<div>&nbsp;</div>
-<div>&nbsp;</div>
-`;
+        </div>`;
         agentDetails.style.backgroundImage = `url(${agentUuid.background})`;
         agentDetails.style.backgroundRepeat = "no-repeat";
         agentDetails.style.backgroundSize = "120% 50%"; //SIZE: width height
         agentDetails.style.backgroundPosition = "-80% 30%"; // POSITION: width height
     }
-
 </script>
 </body>
 </html>

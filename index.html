@@ -5,17 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Valorant Agents</title>
+    <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Ropa+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/valorant" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <header>
-    <div><a href="index.html"><img src="assets/valorant-seeklogo.com.svg" alt="Valorant Logo"></a></div>
     <div>
-        <a href="index.html">Home</a>
-        <a href="html/contact.html">Contact</a>
+        <a href="index.html">
+            <img src="assets/valorant-seeklogo.com.svg" width="50" alt="Valorant Logo">
+        </a>
+    </div>
+    <div>
+        <a class="font-valorant" href="index.html">Home</a>
+        <a class="font-valorant" href="html/contact.html">Contact</a>
     </div>
 </header>
 
@@ -25,15 +29,14 @@
 <p class="loader"></p>
 
 <footer>
-    <div><a href="index.html"><img src="assets/valorant-seeklogo.com.svg" alt="Valorant Logo"></a></div>
+    <div><a href="index.html"><img src="assets/valorant-seeklogo.com.svg" width="50" alt="Valorant Logo"></a>
+    </div>
     <div>
-        <p>© made by <a class="sav">savg</a></p>
+        <p>© made by <a class="font-valorant">savg</a></p>
     </div>
 </footer>
 
-
 <script>
-
     const url = "https://valorant-api.com/v1/agents";
     const out = document.querySelector('#agentsList');
 
@@ -56,14 +59,11 @@
                 `<div>
                   <a href="details.html?uuid=${agent.uuid}">
                         <p>${agent.displayName}</p>
-                        <p style="font-size: 12px; font-weight: lighter; text-shadow: 2px 2px var(--black)">${agent.role.displayName}</p>
+                        <p style="font-size: 12px; font-weight: lighter; text-shadow: 2px 2px var(--lightBlack)">${agent.role.displayName}</p>
                         <img src="${agent.displayIcon}" alt="${agent.displayName}" width="100"></a>
-                </div>
-`;
-            console.log()
+                </div>`;
         })
     }
-
 </script>
 </body>
 </html>

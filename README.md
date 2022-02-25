@@ -1,57 +1,13 @@
-# js1-ma3-api
+# silje-angelvik-js1-ca
 
-####//TO DO:
-**change project name to:** _silje-angelvik-js1-ca_
-
-##Information
-###Rules
-Sharing APIs and copying and sharing of   
-any code will result in your assignment   
-being given a mark of zero.  
-You may only use plain JavaScript for   
-this assignment, no libraries or frameworks.   
-You will be given a mark of zero if you use   
-a library or framework for your JavaScript code.  
-
-##Submission
-Create a folder called your-name-js1-ca,  
-e.g. mary-smith-js1-ca   
-(or use the folder from the GitHub Classroom repo)  
-Add all your code to this folder,   
-zip the folder and submit the zip file  
-
-##Rubrik
-###Index page:    
-####Looping through and rendering the results of an API call (30%)
-Can apply knowledge of JavaScript,     
-and the DOM to develop dynamic solutions,  
-and influence the structure of HTML document
-
-###Details page:    
-####Updating the DOM with the result of retrieving a specific item via an API call (30%)
-Can apply knowledge of JavaScript,   
-and the DOM to develop dynamic solutions,   
-and influence the structure of HTML document
-
-
-##Rubrik, cont.
-###Contact page:    
-####Validating form input using string methods and events (30%)
-Can develop simple, 
-relevant interactive solutions 
-with JavaScript events
-Error-free (10%)  
-Can apply industry-relevant tools,  
-and techniques for testing and    
-troubleshooting source code
-
-
-
+###//TO DO:
+**change project name to:**  
+_silje-angelvik-js1-ca_
 
 ##Resources:  
 * [Valorant API](https://valorant-api.com/)
 * [Logo](https://seeklogo.com/vector-logo/379976/valorant)
-* Loader
+* [Loader](https://icons8.com/preloaders/en/miscellaneous)
 * [Slide](https://cdn.discordapp.com/attachments/872021496938254376/943416546544463902/Slide4.4.pdf)
 * [Regex Address](https://stackoverflow.com/questions/11456670/regular-expression-for-address-field-validation)
 * [RegEx Address 2](https://stackoverflow.com/questions/9397485/regex-street-address-match)

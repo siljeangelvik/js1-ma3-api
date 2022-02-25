@@ -47,15 +47,13 @@ const validateInputs = () => {
         setSuccess(name);
     }
 
-
     if (addressValue === '') {
-        setError(address, 'Address is required');
+        setError(address, 'IP Address is required');
     } else if (addressValue.length < 25) {
         setError(address, 'IP Address has to be at least 25 characters');
     } else {
         setSuccess(address);
     }
-
 
     if (emailValue === '') {
         setError(email, 'Email is required');
@@ -73,7 +71,6 @@ const validateInputs = () => {
         setSuccess(email2);
     }
 
-
     if (commentValue === '') {
         setError(comment, 'Comment is required');
     } else if (commentValue.length < 10) {
@@ -82,14 +79,13 @@ const validateInputs = () => {
         setSuccess(comment);
     }
 
-    // return nameValue && addressValue && emailValue && email2Value && commentValue;
-
     if(document.getElementById('name').value!=='' &&
         document.getElementById('address').value!=='' &&
         document.getElementById('email').value!=='' &&
         document.getElementById('email2').value!=='' &&
         document.getElementById('comment').value!=='') {
-        document.getElementById('successMessage').style.display = 'flex';
+         document.getElementById('successMessage').style.display = 'flex';
+         document.getElementById('hideH1').style.display = 'none';
     }
 
 };
