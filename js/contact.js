@@ -79,14 +79,13 @@ const validateInputs = () => {
         setSuccess(comment);
     }
 
-    if(document.getElementById('name').value!=='' &&
-        document.getElementById('address').value!=='' &&
-        document.getElementById('email').value!=='' &&
-        document.getElementById('email2').value!=='' &&
-        document.getElementById('comment').value!=='') {
-         document.getElementById('successMessage').style.display = 'flex';
-         document.getElementById('hideH1').style.display = 'none';
+    if (document.getElementById('name').value !== '' &&
+        document.getElementById('address').value !== '' &&
+        document.getElementById('email').value !== '' &&
+        document.getElementById('email2').value !== '' &&
+        document.getElementById('comment').value !== '') {
+        document.getElementById('successMessage').style.display = 'flex';
+        document.getElementById('hideH1').style.display = 'none';
     }
 
 };
-

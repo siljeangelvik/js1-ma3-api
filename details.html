@@ -59,9 +59,8 @@
 
     function listData(agentUuid) {
         //console.log(agentUuid);
-        document.title = `Agent: ` + agentUuid.displayName;
+        document.title = `Agent | ` + agentUuid.displayName;
         agentDetails.innerHTML = `
-
 
         <h1>${agentUuid.displayName}</h1>
 
@@ -72,43 +71,35 @@
 
         <p>${agentUuid.description}</p>
         <h2>Abilities</h2>
-
             <div class="detailsAbilities" style="display: flex; flex-direction: column;">
             <div style="display: flex; justify-content: space-between;">
               <h3 style="display: inline-flex">${agentUuid.abilities[0].displayName}</h3>
               <img src="${agentUuid.abilities[0].displayIcon}" alt="${agentUuid.displayName} + ${agentUuid.abilities[0].displayName}" width="40" height="40">
             </div>
-
              <h4 style="padding-bottom: 15px;">${agentUuid.abilities[0].slot}: </h4>
              <em>${agentUuid.abilities[0].description}</em>
             </div>
-
             <div class="detailsAbilities" style="display: flex; flex-direction: column;">
             <div style="display: flex; justify-content: space-between;">
               <h3 style="display: inline-flex">${agentUuid.abilities[1].displayName}</h3>
               <img src="${agentUuid.abilities[1].displayIcon}" alt="${agentUuid.displayName} + ${agentUuid.abilities[1].displayName}" width="40" height="40">
             </div>
-
              <h4 style="padding-bottom: 15px;">${agentUuid.abilities[1].slot}: </h4>
              <em>${agentUuid.abilities[1].description}</em>
             </div>
-
             <div class="detailsAbilities" style="display: flex; flex-direction: column;">
             <div style="display: flex; justify-content: space-between;">
               <h3 style="display: inline-flex">${agentUuid.abilities[2].displayName}</h3>
               <img src="${agentUuid.abilities[2].displayIcon}" alt="${agentUuid.displayName} + ${agentUuid.abilities[2].displayName}" width="40" height="40">
             </div>
-
              <h4 style="padding-bottom: 15px;">${agentUuid.abilities[2].slot}: </h4>
              <em>${agentUuid.abilities[2].description}</em>
             </div>
-
             <div class="detailsAbilities" style="display: flex; flex-direction: column;">
             <div style="display: flex; justify-content: space-between;">
               <h3 style="display: inline-flex">${agentUuid.abilities[3].displayName}</h3>
               <img src="${agentUuid.abilities[3].displayIcon}" alt="${agentUuid.displayName} + ${agentUuid.abilities[3].displayName}" width="40" height="40">
             </div>
-
              <h4 style="padding-bottom: 15px;">${agentUuid.abilities[3].slot}: </h4>
              <em>${agentUuid.abilities[3].description}</em>
             </div>
@@ -117,7 +108,6 @@
         <div style="display: flex; flex-direction: row; justify-content: space-between;">
            <p>${agentUuid.displayName} voiceline on match entry</p>
         </div>
-
         <div style="display: flex; flex-direction: row; gap: 20px;">
             <audio controls>
                 <source src="${agentUuid.voiceLine.mediaList[0].wave}">

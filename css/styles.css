@@ -12,11 +12,18 @@ body {
     width: 330px;
     margin: 10vh auto 0 auto;
     font-family: 'Ropa Sans', sans-serif;
-    color:var(--whiteSmoke);
+    color: var(--whiteSmoke);
     background: var(--lightBlack);
 }
 
-.font-valorant { color:var(--whiteSmoke); text-decoration: none; list-style-type: none; font-weight: lighter; letter-spacing: 1px; font-family: 'VALORANT', sans-serif; }
+.font-valorant {
+    color: var(--whiteSmoke);
+    text-decoration: none;
+    list-style-type: none;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    font-family: 'VALORANT', sans-serif;
+}
 
 header, footer {
     background-color: var(--darkBlack);
@@ -28,11 +35,23 @@ header, footer {
     left: 0;
 }
 
-header { position: absolute; top: 0;  height: 10% }
-footer { position: absolute; bottom: 0; height:8%; text-transform: uppercase; }
+header {
+    position: absolute;
+    top: 0;
+    height: 10%
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    height: 8%;
+    text-transform: uppercase;
+}
 
 header div:first-child,
-footer div:first-child { margin-left: 15px; }
+footer div:first-child {
+    margin-left: 15px;
+}
 
 header div:last-child,
 footer div:last-child {
@@ -43,40 +62,102 @@ footer div:last-child {
     column-gap: 40px;
 }
 
-footer div:last-child { justify-content: flex-start; font-size: 13px; }
+footer div:last-child {
+    justify-content: flex-start;
+    font-size: 13px;
+}
 
-* { text-rendering: optimizeLegibility; -moz-osx-font-smoothing: grayscale; }
-html { position: relative; background-color: var(--lightBlack); }
-html, body { height: 100%; overflow-y: hidden; }
-h1 { font-size: 24px; }
-h2 { font-size: 22px; }
-h3 { font-size: 20px; }
-h4 { font-size: 18px; }
-h1,h2,h3 { font-weight: bolder; font-family: 'VALORANT', sans-serif; background-color: transparent; }
-h4 { font-weight: bolder; letter-spacing: 0.07em; }
-p {  line-height: 1.4em; letter-spacing:0.05em; }
-em { font-size: 16px; }
-a { color:var(--white); text-decoration: none; list-style-type: none; font-weight: lighter; letter-spacing: 1px; font-family: 'VALORANT', sans-serif; }
+* {
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+    position: relative;
+    background-color: var(--lightBlack);
+}
+
+html, body {
+    height: 100%;
+    overflow-y: hidden;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 22px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+h1, h2, h3 {
+    font-weight: bolder;
+    font-family: 'VALORANT', sans-serif;
+    background-color: transparent;
+}
+
+h4 {
+    font-weight: bolder;
+    letter-spacing: 0.07em;
+}
+
+p {
+    line-height: 1.4em;
+    letter-spacing: 0.05em;
+}
+
+em {
+    font-size: 16px;
+}
+
+a {
+    color: var(--white);
+    text-decoration: none;
+    list-style-type: none;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    font-family: 'VALORANT', sans-serif;
+}
 
 /* INDEX & DETAILS STYLES */
-#agentDetailsBox::-webkit-scrollbar { display: none; }
+#agentDetailsBox::-webkit-scrollbar {
+    display: none;
+}
 
 #agentsList, #agentDetailsBox, #form, #container, #successMessage {
     display: flex;
     text-decoration: none;
     list-style-type: none;
     background-repeat: no-repeat;
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-    max-width:330px;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    max-width: 330px;
     height: 82%;
     overflow-x: hidden; /* left, right *//* left, right */
     overflow-y: scroll !important; /* top, bottom */
 }
 
-#agentsList { justify-content: space-around; flex-wrap: wrap; }
-#agentsList div { text-align: center; width: 48%; }
-#agentDetailsBox, #form { flex-direction: column; }
+#agentsList {
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#agentsList div {
+    text-align: center;
+    width: 48%;
+}
+
+#agentDetailsBox, #form {
+    flex-direction: column;
+}
 
 .back {
     letter-spacing: 1px;
@@ -94,7 +175,9 @@ a { color:var(--white); text-decoration: none; list-style-type: none; font-weigh
     z-index: 999;
 }
 
-.back * { color: var(--darkBlack); }
+.back * {
+    color: var(--darkBlack);
+}
 
 /* FORM & SUCCESS MESSAGE STYLES */
 #form {
@@ -107,7 +190,9 @@ a { color:var(--white); text-decoration: none; list-style-type: none; font-weigh
     color: var(--whiteSmoke);
 }
 
-#form h1 { text-align: center; }
+#form h1 {
+    text-align: center;
+}
 
 #form button {
     padding: 10px;
@@ -120,7 +205,10 @@ a { color:var(--white); text-decoration: none; list-style-type: none; font-weigh
     cursor: pointer;
 }
 
-.input-field { display: flex; flex-direction: column; }
+.input-field {
+    display: flex;
+    flex-direction: column;
+}
 
 .input-field input, textarea {
     border: 2px solid var(--whiteSmoke);
@@ -136,15 +224,29 @@ a { color:var(--white); text-decoration: none; list-style-type: none; font-weigh
 }
 
 .input-field input:focus,
-.input-field textarea:focus { outline: 0; }
+.input-field textarea:focus {
+    outline: 0;
+}
 
-.input-field.success input, .input-field.success textarea { border-color: var(--inputSuccess); }
-.input-field.error input, .input-field.error textarea { border-color: var(--inputError); }
+.input-field.success input, .input-field.success textarea {
+    border-color: var(--inputSuccess);
+}
+
+.input-field.error input, .input-field.error textarea {
+    border-color: var(--inputError);
+}
 
 #form label,
-#form .error { text-transform: uppercase; letter-spacing: 0.08em; padding-bottom: 5px; font-size: 14px; }
+#form .error {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding-bottom: 5px;
+    font-size: 14px;
+}
 
-#form .error { font-size: 12px; }
+#form .error {
+    font-size: 12px;
+}
 
 .input-field .error {
     color: var(--inputError);
@@ -155,7 +257,6 @@ a { color:var(--white); text-decoration: none; list-style-type: none; font-weigh
 }
 
 #successMessage {
-
     text-align: center;
     background-color: var(--lightBlack);
     justify-content: space-around;
@@ -169,8 +270,15 @@ a { color:var(--white); text-decoration: none; list-style-type: none; font-weigh
     margin: 0 auto;
 }
 
-#successMessage p { line-height: 1.5em; letter-spacing: 0.07em; }
-#successMessage strong { letter-spacing: 0.07em; }
+#successMessage p {
+    line-height: 1.5em;
+    letter-spacing: 0.07em;
+}
+
+#successMessage strong {
+    letter-spacing: 0.07em;
+}
+
 #successMessage a {
     background-color: var(--redCrimson);
     padding: 10px;

@@ -6,10 +6,10 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Contact us!</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
     <link href="https://fonts.cdnfonts.com/css/valorant" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Ropa+Sans&display=swap" rel="stylesheet">
-    <script defer src="/js/contact.js"></script>
+    <script defer src="../js/contact.js"></script>
 </head>
 <body>
 <header>
@@ -38,44 +38,41 @@
 <div id="container">
     <form id="form" onchange="validateInputs()">
         <h4 class="font-valorant">Share a message with us</h4>
-
         <div class="input-field">
             <label for="name">Name:</label>
-            <input id="name" name="name"  type="text">
+            <input id="name" name="name" type="text">
             <div class="error"></div>
         </div>
-
         <div class="input-field">
             <label for="address">IP Address:</label>
             <input id="address" name="address">
             <div class="error"></div>
         </div>
-
         <div class="input-field">
             <label for="email">Email:</label>
             <input id="email" name="email" type="text">
             <div class="error"></div>
         </div>
-
         <div class="input-field">
             <label for="email2">Confirm Email:</label>
-            <input id="email2" name="email2"  type="text">
+            <input id="email2" name="email2" type="text">
             <div class="error"></div>
             <br>
         </div>
-
         <div class="input-field">
             <label for="comment">Message:</label>
             <textarea id="comment" name="comment" rows="4" cols="50"></textarea>
             <div class="error"></div>
         </div>
-
         <button type="submit" onsubmit="validateInputs()" id="button" class="font-valorant">Send your message</button>
     </form>
 </div>
 
 <footer>
-    <div><a href="../index.html"><img src="../assets/valorant-seeklogo.com.svg" width="50" alt="Valorant Logo"></a>
+    <div>
+        <a href="../index.html">
+            <img src="../assets/valorant-seeklogo.com.svg" width="50" alt="Valorant Logo"/>
+        </a>
     </div>
     <div>
         <p>© made by <a class="font-valorant">savg</a></p>

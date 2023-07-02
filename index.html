@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Valorant Agents</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="./css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Ropa+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/valorant" rel="stylesheet">
 </head>
@@ -23,28 +23,31 @@
     </div>
 </header>
 
-<div id="agentsList">
-    <h1>Valorant Agents</h1>
-</div>
+<h1>Valorant Agents</h1>
+<div id="agentsList"></div>
 <p class="loader"></p>
 
 <footer>
-    <div><a href="index.html"><img src="assets/valorant-seeklogo.com.svg" width="50" alt="Valorant Logo"></a>
+    <div>
+        <a href="index.html">
+            <img src="assets/valorant-seeklogo.com.svg" width="50" alt="Valorant Logo"/>
+        </a>
     </div>
     <div>
-        <p>© made by <a class="font-valorant">savg</a></p>
+        <p>© made by <a class="font-valorant">avenaDev</a></p>
     </div>
 </footer>
 
 <script>
-    const url = "https://valorant-api.com/v1/agents";
+    const BASE_URL = "https://valorant-api.com/v1";
+    const AGENTS_URL = `${BASE_URL}/agents?isPlayableCharacter=true`;
     const out = document.querySelector('#agentsList');
 
-    fetch(url)
+    fetch(AGENTS_URL)
         .then(response => response.json())
         .then(parsedData => {
-            const removeAgent = parsedData.data;
-            removeAgent.splice(6, 1); // removing duplicate agent: "Sova"
+            // const removeAgent = parsedData.data;
+            // removeAgent.splice(6, 1); // removing duplicate agent: "Sova"
             listData(parsedData.data);
         })
         .catch((error) => out.innerHTML = "Something's wrong!" + error)
