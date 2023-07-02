@@ -1,4 +1,6 @@
-# CA: JavaScript 1
+# JavaScript 1 CA
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d453fca7-a83a-47a1-a610-501d85691fea/deploy-status)](https://app.netlify.com/sites/javascript1-ca/deploys)  
 
 **Student:** [Silje Angelvik](https://github.com/siljeangelvik)  
 **Host:** [Netlify](https://javascript1-ca.netlify.app/)  
@@ -9,7 +11,8 @@
 ## Description
 
 **Project Local Name:** js1-ma3-api  
-**Project Remote Name:** silje-angelvik-js1-ca
+**Project Remote Name:** silje-angelvik-js1-ca  
+**Project Playground Repo:** [api-valorant-silje](https://github.com/siljeangelvik/api-valorant-silje) (Private)  
 
 ## Built With
 
@@ -63,3 +66,6 @@ Click on the badges below to go to my profiles or contact me via email.
 * [MDN RegExp Groups and ranges](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges)
 * [Regex101](https://regex101.com/)
 * [CodePen: Form Validation](https://codepen.io/xiaolasse/pen/daEYMV?editors=0010)
+* [geeksforgeeks: Set opacity only to background](https://www.geeksforgeeks.org/set-the-opacity-only-to-background-color-not-on-the-text-in-css/)
+* [Sticky Footer](https://css-tricks.com/couple-takes-sticky-footer/)
+* [Flexbox Items Width](https://forum.freecodecamp.org/t/how-does-flex-wrap-decide-how-many-flex-items-to-be-wrapped/336444)
